@@ -18,7 +18,7 @@ def slack_chat_to_github_md(slack_msgs, nicks):
         for nick_regex in nicks_regexes:
             replaced = nick_regex.sub(nick_replace_with, line)
             if replaced != line:
-                output += replaced
+                output += '\n' + replaced
                 line_processed = True
                 break
         
